@@ -8,8 +8,12 @@
 
     <div class="row">
         <h1>Bienvenue sur Todo List, l'application vous permettant de gérer l'ensemble de vos tâches sans effort !</h1>
-        <a href="{{ path('task_create') }}" class="btn btn-success">Créer une nouvelle tâche</a>
+        {% if app.user %}
+            <a href="{{ path('task_create') }}" class="btn btn-success">Créer une nouvelle tâche</a>
+        {% else %}
+            <button class="btn btn-success" disabled>Vous devez être connecté pour créer une tâche !</button>
+        {% endif %}
         <a href="{{ path('task_list') }}" class="btn btn-info">Consulter la liste des tâches à faire</a>
-        <a href="" class="btn btn-secondary">Consulter la liste des tâches terminées</a>
     </div>
+
 {% endblock %}
