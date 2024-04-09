@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\User;
 use App\Repository\TaskRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
@@ -26,7 +27,10 @@ class Task
     #[ORM\Column]
     private ?bool $isDone = null;
 
-     public function __construct()
+    #[ORM\ManyToOne(targetEntity:"App\Entity\User")]
+    private ?User $author = null;
+
+    public function __construct()
     {
         $this->createdAt = new \DateTimeImmutable();
         $this->isDone = false; // Valeur par défaut
@@ -81,6 +85,18 @@ class Task
     public function toggle(bool $flag): static
     {
         $this->isDone = $flag;
+
+        return $this;
+    }
+
+    public function getAuthor(): ?User
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(?User $author): static
+    {
+        $this->author = $author;
 
         return $this;
     }

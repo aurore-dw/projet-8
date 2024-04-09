@@ -7,7 +7,7 @@
     <div class="row">
         <h3>Liste des Tâches</h3>
         {% for task in tasks %}
-        <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="col-sm-3 col-lg-3 col-md-3">
             <div class="thumbnail">
                 <div class="caption">
                     <h4 class="pull-right">
@@ -15,6 +15,8 @@
                     </h4>
                     <h4><a href="{{ path('task_edit', {'id' : task.id }) }}">{{ task.title }}</a></h4>
                     <p>{{ task.content }}</p>
+                    {{ task.author is not empty ? task.author.username : 'Anonyme' }}
+                    <p class="text-right">{{ task.createdAt | date('d/m/Y')}}</p>
                 </div>
                 <div>
                     <form action="{{ path('task_toggle', {'id' : task.id }) }}">
@@ -22,11 +24,15 @@
                             {% if not task.isDone %}Marquer comme faite{% else %}Marquer non terminée{% endif %}
                         </button>
                     </form>
-                    <form method="POST" action="{{ path('task_delete', {'id' : task.id }) }}">
-                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ task.id) }}">
-                        <button type="submit" onclick="return confirm('Vous êtes sure de supprimer cette tâche ?')" class="btn btn-danger btn-sm pull-right">Supprimer</button>
-                    </form>
-
+                    {% if app.user %}
+                        {% if app.user == task.author or ('ROLE_ADMIN' in app.user.roles and (task.author is null or task.author.username == 'Anonyme')) %}
+                        {# L'utilisateur est l'auteur de la tâche, ou il est administrateur et l'auteur est null / anonyme, donc a accès au bouton de suppression #}
+                            <form method="POST" action="{{ path('task_delete', {'id' : task.id }) }}">
+                                <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ task.id) }}">
+                                <button type="submit" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?')" class="btn btn-danger btn-sm pull-right">Supprimer</button>
+                            </form>
+                        {% endif %}
+                    {% endif %}
                 </div>
             </div>
         </div>
