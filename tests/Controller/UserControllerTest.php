@@ -18,11 +18,17 @@ use App\Service\UserServiceInterface;
 
 class UserControllerTest extends WebTestCase
 {
+    // Instancie un client pour effectuer des requêtes HTTP.
     private KernelBrowser $client;
+    // Instance du repository pour accéder aux données de la table Task.
     private UserRepository $repository;
+    // Chemin de base pour les routes liées aux tâches.
     private string $path = '/users/';
+    // Gère les entités de la base de données.
     private EntityManagerInterface $entityManager;
+    // Utilisateur avec le rôle d'administrateur.
     private User $adminUser;
+    // Utilisateur avec le rôle d'user.
     private User $user;
 
     protected function setUp(): void
