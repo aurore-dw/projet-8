@@ -46,12 +46,9 @@ class AppFixtures extends Fixture
         $faker = Factory::create();
         for ($i = 0; $i < 10; $i++) {
             $task = new Task();
-            // Génère un titre de 2 mots.
             $task->setTitle($faker->sentence(2)); 
-            // Génère un contenu de 3 mots.
             $task->setContent($faker->sentence(3)); 
             $task->setCreatedAt(new \DateTimeImmutable());
-            // Génère une valeur booléenne aléatoire (true/false).
             $task->toggle($faker->boolean); 
             $manager->persist($task);
         }
