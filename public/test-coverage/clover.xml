@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1712909355">
-  <project timestamp="1712909355">
+<coverage generated="1712910744">
+  <project timestamp="1712910744">
     <file name="C:\Users\Aurore\Documents\GitHub\projet-8-new\src\Controller\DefaultController.php">
       <class name="App\Controller\DefaultController" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
@@ -77,15 +77,15 @@
       <line num="118" type="stmt" count="0"/>
       <line num="120" type="stmt" count="0"/>
       <line num="124" type="method" name="delete" visibility="public" complexity="5" crap="30" count="0"/>
-      <line num="128" type="stmt" count="0"/>
+      <line num="127" type="stmt" count="0"/>
+      <line num="130" type="stmt" count="0"/>
       <line num="131" type="stmt" count="0"/>
       <line num="132" type="stmt" count="0"/>
-      <line num="133" type="stmt" count="0"/>
+      <line num="135" type="stmt" count="0"/>
       <line num="136" type="stmt" count="0"/>
       <line num="137" type="stmt" count="0"/>
-      <line num="138" type="stmt" count="0"/>
-      <line num="141" type="stmt" count="0"/>
-      <metrics loc="144" ncloc="130" classes="1" methods="6" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="51" coveredstatements="34" elements="57" coveredelements="36"/>
+      <line num="140" type="stmt" count="0"/>
+      <metrics loc="143" ncloc="130" classes="1" methods="6" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="51" coveredstatements="34" elements="57" coveredelements="36"/>
     </file>
     <file name="C:\Users\Aurore\Documents\GitHub\projet-8-new\src\Controller\UserController.php">
       <class name="App\Controller\UserController" namespace="global">
@@ -370,6 +370,6 @@
       <line num="53" type="stmt" count="7"/>
       <metrics loc="56" ncloc="56" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="12" elements="17" coveredelements="15"/>
     </file>
-    <metrics files="13" loc="890" ncloc="763" classes="12" methods="48" coveredmethods="35" conditionals="0" coveredconditionals="0" statements="243" coveredstatements="178" elements="291" coveredelements="213"/>
+    <metrics files="13" loc="889" ncloc="763" classes="12" methods="48" coveredmethods="35" conditionals="0" coveredconditionals="0" statements="243" coveredstatements="178" elements="291" coveredelements="213"/>
   </project>
 </coverage>
