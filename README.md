@@ -32,7 +32,7 @@
 
 7. Accéder à l'application, généralement `http://localhost:8000`.
 
-8. Les utilisateurs par défaut :
+8. Les utilisateurs par défaut 
 
 | user   | password | role       |
 | ------ | -------- | ---------- |
