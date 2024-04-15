@@ -35,9 +35,13 @@
    
 - `symfony server:start`
 
-8. Accéder à l'application, généralement `http://localhost:8000`.
+8. Lancer Webpack encore
 
-9. Les utilisateurs par défaut 
+- `yarn run watch`
+
+9. Accéder à l'application, généralement `http://localhost:8000`.
+
+10. Les utilisateurs par défaut 
 
 | user   | password | role       |
 | ------ | -------- | ---------- |
