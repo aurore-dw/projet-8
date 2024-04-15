@@ -32,6 +32,15 @@
 
 7. Accéder à l'application, généralement `http://localhost:8000`.
 
+8. Les utilisateurs par défaut :
+
+| user   | password | role       |
+| ------ | -------- | ---------- |
+| user0  | 1234     | ROLE_USER  |
+| user1  | 1234     | ROLE_USER  |
+| admin0 | 1234     | ROLE_ADMIN |
+| admin1 | 1234     | ROLE_ADMIN |
+
 ## Pour contribuer au projet :
 
 - Accéder au fichier contribute.md, dans le dossier docs
