@@ -31,3 +31,7 @@
 - `symfony server:start`
 
 7. Accéder à l'application, généralement `http://localhost:8000`.
+
+## Pour contribuer au projet :
+
+- Accéder au fichier contribute.md, dans le dossier docs
