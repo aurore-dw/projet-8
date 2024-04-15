@@ -58,10 +58,6 @@
 
 - Il se trouve dans le dossier public/test-coverage
 
-## Rapport de l'audit de performance :
-
-- Il se trouve dans le dossier docs/
-
 ## Rapport de qualité du code :
 
 - Il est accessible via le badge en haut du README, qui redirigera vers le projet sur Codacy
