@@ -53,3 +53,19 @@
 ## Pour contribuer au projet :
 
 - Accéder au fichier contribute.md, dans le dossier docs
+
+## Rapport de couverture html des tests unitaires :
+
+- Il se trouve dans le dossier public/test-coverage
+
+## Rapport de l'audit de performance :
+
+- Il se trouve dans le dossier docs/
+
+## Rapport de qualité du code :
+
+- Il est accessible via le badge en haut du README, qui redirigera vers le projet sur Codacy
+
+## Diagrammes UML :
+
+- Ils sont dans le dossier docs/Diagrammes
