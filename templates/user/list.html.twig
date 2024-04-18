@@ -29,6 +29,8 @@
                     <td>
                         {% if 'ROLE_ADMIN' in user.roles %}
                             Administrateur
+                        {% elseif 'ROLE_ANONYME' in user.roles %}
+                            Anonyme
                         {% else %}
                             Utilisateur
                         {% endif %}
