@@ -124,7 +124,6 @@ class TaskController extends AbstractController
     #[Route('/{id}/delete', name: 'task_delete', methods: ['POST'])]
     public function delete(Request $request, Task $task, EntityManagerInterface $entityManager): Response
     {
-        // Check if the currently authenticated user is the author of the task
         $user = $this->getUser(); 
 
         // Vérifie si l'utilisateur actuel est l'auteur de la tâche
